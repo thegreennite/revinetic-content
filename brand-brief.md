@@ -37,3 +37,15 @@ Builder/operator energy (Sabrina Ramonov), early-and-hands-on with new AI tools 
 - Muted green (secondary accent): `#69A443`
 - White (body text): `#FFFFFF`
 - Card template: black background, lime accent bars top/bottom, lime for the main hook line, white for the supporting line, "REVINETIC AI" in white + "@revinetic_ai" in muted green near the bottom.
+
+## Image Hosting for Instagram Posts (fully automated, no manual upload — read this before posting any image)
+GHL's create-post API does NOT require images to be uploaded to GHL's own Media Storage. The `media.url` field on a post just needs to be any public HTTPS URL — GHL/Meta fetch it directly. There is no file-upload operation exposed through the gohighlevel MCP tools (checked 2026-08-10, none exists), so never try to upload binary files through GHL and never ask Lucas to manually drag a file into GHL Media Storage — that's a dead workflow now.
+
+**Correct process, fully self-serve:**
+1. Generate the card image locally (or in the cloud checkout) as usual.
+2. Save it into a git checkout of the PUBLIC repo `https://github.com/thegreennite/revinetic-images` (separate from this private `revinetic-content` repo — images only, no brand strategy text goes in the public repo).
+3. Commit and push it to `main`.
+4. Use `https://raw.githubusercontent.com/thegreennite/revinetic-images/main/<filename>.png` directly as the `media.url` in the create-post call. No GHL upload step, no human step.
+5. Verified working 2026-08-10: pushed a PNG, confirmed `curl` returns HTTP 200 with correct content-type, then posted successfully to Instagram using that URL (published, real permalink returned).
+
+Use a unique filename per post (e.g. date + short slug) so old images aren't overwritten before their post's history is worth keeping.
