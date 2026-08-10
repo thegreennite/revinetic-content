@@ -31,9 +31,9 @@ Builder/operator energy (Sabrina Ramonov), early-and-hands-on with new AI tools 
 - One concrete idea per post, not three
 - Specific details over generic statements — real numbers, real outcomes, real timeframes
 
-## Visual Brand Colors (pulled directly from revinetic.com's CSS, 2026-08-10 — use these exactly, do not guess new ones)
-- Navy (primary background): `#183153`
+## Visual Brand Colors (base colors pulled from revinetic.com's CSS, 2026-08-10; background swapped to black per Lucas's preference — use these exactly, do not guess new ones)
+- Black (primary background): `#000000` — Lucas's explicit choice over the site's navy, keep this
 - Lime accent (primary highlight/headline color): `#9afe5a`
 - Muted green (secondary accent): `#69A443`
 - White (body text): `#FFFFFF`
-- Card template: navy background, lime accent bars top/bottom, lime for the main hook line, white for the supporting line, "REVINETIC AI" in white + "@revinetic_ai" in muted green near the bottom.
+- Card template: black background, lime accent bars top/bottom, lime for the main hook line, white for the supporting line, "REVINETIC AI" in white + "@revinetic_ai" in muted green near the bottom.
